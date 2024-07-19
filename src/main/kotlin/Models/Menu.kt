@@ -24,7 +24,7 @@ class Menu(val screen: IScreen) {
             if (!screen.customInputProcess) {
                 if (Utils.isInt(command)) {
                     val choice = command.toInt()
-                    if (choice < 0 || choice > screen.listOfCommands.size) {
+                    if (choice < 0 || choice > screen.listOfCommands.size - 1) {
                         println("Введите число соответствующее одной из команд")
                     } else {
                         screen.listOfCommands[choice].event()
